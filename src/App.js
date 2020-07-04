@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Typography, Container } from "@material-ui/core";
+import Interface from "./Interface";
+const S = {
+  flexContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+    alignItems: "center",
+    justifyContent: "space-between",
+    boxSizing: "border-box",
+    padding: 0,
+    margin: 0,
+  },
+};
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="xl">
+      <div style={S.flexContainer}>
+        <Typography variant="h2">
+          Mapping Demo
+          {/* ,&nbsp;<a
+            style={{ fontSize: "10%" }}
+            target="_blank"
+            href="https://www.google.com/maps/d/viewer?mid=1RnQNtgEXUfJX0edsa9whdrXAun9rYd0O&ll=32.462847328400976%2C34.97585218808621&z=18"
+          >
+            reference google map
+          </a> */}
+        </Typography>
+        <Interface />
+      </div>
+    </Container>
   );
 }
-
-export default App;
